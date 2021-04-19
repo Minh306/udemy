@@ -1,0 +1,90 @@
+.viewIn{
+    margin-top: $mg-2;
+    .viewIn__content{
+        width: 75.8%;
+        margin: auto;
+    }
+    .card-title{
+        @include styleText($color-black-0, $fs-0, $fw-bold);
+    }
+    .card-text{
+        @include styleText($color-gray-4, $fs-1, $fw-normal);
+    }
+    .rating{
+        display: flex;
+        .rating_star{
+            @include styleText($color-yellow, $fs-1, $fw-normal);
+            margin-right:$mg-0;
+        }
+        span:nth-child(2){
+            @include styleText($color-gray-4, $fs-1, $fw-bold);
+            margin-left:$mg-0;
+        }
+        span:last-child{
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+           
+        }
+    }
+    .price{
+        padding-bottom: $pd-1;
+        text-align: right;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        .old-price{
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+            text-decoration: line-through;
+        }
+        .new-price{
+            @include styleText($color-black-0, $fs-0, $fw-bold);
+        }
+    }
+    .owl-next {
+        right: -2%;
+    }
+    .owl-prev {
+        left: -2%;
+    }
+}
+//res
+@include responsive("XXL"){
+    .viewIn__content{
+        width: 90% !important;
+        .owl-next, .owl-prev{
+            top: 43.5% !important;
+        }
+        .owl-next {
+            right: -2.5% !important;
+        }
+        .owl-prev {
+            left: -2.5% !important;
+        }
+    }
+}
+@include responsive("medium"){
+    .viewIn__content{
+        width: 90% !important;
+        .owl-next, .owl-prev{
+            top: 41.5% !important;
+        }
+        .owl-next {
+            right: -4.5% !important;
+        }
+        .owl-prev {
+            left: -4.5% !important;
+        }
+    }
+}
+@include responsive("large"){
+    .viewIn__content{
+        width: 90% !important;
+        .owl-next, .owl-prev{
+            top: 38.5% !important;
+        }
+        .owl-next {
+            right: -3.5% !important;
+        }
+        .owl-prev {
+            left: -3.5% !important;
+        }
+    }
+}

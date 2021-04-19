@@ -1,0 +1,30 @@
+.services{
+    margin-top: $mg-2;
+    padding-top: $pd-2;
+    background: #F2F3F5;
+    padding-bottom: $pd-2;
+     .services__container{
+        width: 60%;
+        margin: auto;
+        .services__items{
+            border: 1px solid #e8e9eb;
+            background: #fff;
+            padding: 30px;
+            height: 160px;
+            h3{
+                @include styleText($color-black-0, $fs-2, $fw-bold)
+            }
+            p{
+                margin: 0;
+                font-size: 16px;
+                color: #686f7a;
+            }
+        }
+     }
+}
+//res
+@include responsive("XXL"){
+    .services__container{
+        width: 90% !important;
+    }
+}
